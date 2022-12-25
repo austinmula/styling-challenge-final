@@ -1,0 +1,44 @@
+// @use '../custom' as *;
+
+.features {
+  background-color: $bg-dark;
+  .grid-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 0.3em;
+  }
+  .feature-card {
+    padding: 4em 1em;
+    border-bottom: 8px solid $primary-color;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      padding: 1rem 0;
+    }
+
+    .svg-container {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      color: $text-color-dark;
+      font-size: 1.3rem;
+    }
+  }
+
+  .alt {
+    background-image: url("https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    border-bottom: 20px solid $primary-color;
+    height: 392px;
+    color: $text-color-light;
+    p {
+      color: $text-color-light;
+    }
+  }
+}
