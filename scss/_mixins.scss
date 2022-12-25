@@ -1,0 +1,17 @@
+@mixin grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+@mixin flexContainer($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
