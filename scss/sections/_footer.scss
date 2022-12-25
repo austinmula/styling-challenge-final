@@ -1,12 +1,23 @@
 // @use '../custom' as *;
 
 .footer {
-  background-color: #212830;
-  color: #fff;
+  background-color: $footer-bg;
+  color: $text-color-light;
 
   .grid-footer {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    .grid-footer-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      p {
+        margin-bottom: 1rem;
+        max-width: 400px;
+        font-weight: 300;
+      }
+    }
   }
 
   .socials {
@@ -17,7 +28,7 @@
   }
 
   .input {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $text-color-dark;
     padding-bottom: 0.7rem;
 
     input {
@@ -26,5 +37,9 @@
       background: inherit;
       color: #fff;
     }
+  }
+
+  .copyrights {
+    margin-top: 2rem;
   }
 }

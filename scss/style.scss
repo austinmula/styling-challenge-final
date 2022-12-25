@@ -6,6 +6,8 @@
 @import "sections/works";
 @import "sections/blogs";
 @import "sections/testimonials";
+@import "sections/actions";
+@import "sections/footer";
 
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -28,6 +30,124 @@
         letter-spacing: 1px;
         color: $text-color-dark;
         margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.button {
+  text-decoration: none;
+  // width: 100px;
+  font-weight: 600;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+.out {
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  width: 130px;
+}
+
+.sol {
+  padding: 2px 5px;
+  width: 120px;
+  background-color: $primary-color;
+  color: #fff;
+}
+
+/*  
+*
+Media Queries
+*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  * {
+    font-size: 12px;
+  }
+  .works {
+    .grid-works {
+      grid-template-columns: 1fr;
+      // grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0.3em 0.3em;
+      grid-template-areas:
+        "first"
+        "second"
+        "third";
+    }
+  }
+  .overview {
+    .grid-overview {
+      grid-template-columns: 1fr;
+      grid-row-gap: 2em;
+    }
+  }
+
+  .blogs {
+    .grid-blog {
+      grid-template-columns: 1fr;
+      grid-row-gap: 1em;
+    }
+  }
+  .features {
+    .grid-features {
+      grid-template-columns: 1fr;
+      grid-row-gap: 2.5em;
+    }
+    .feature-card {
+      height: 300px;
+    }
+  }
+  .testimonial {
+    .grid-testimonial {
+      grid-template-columns: 1fr;
+    }
+  }
+  .footer {
+    .grid-footer {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .grid-container {
+    .right {
+      display: none;
+      .search-box {
+        display: none;
+      }
+    }
+    .center {
+      .navigation {
+        .navigation-menu {
+          display: none;
+        }
+        .navigation-icon {
+          display: inline-block;
+          i {
+            color: #f5f6f8;
+          }
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    .right {
+      display: none;
+    }
+
+    .center {
+      flex-direction: column;
+      .inner-left {
+        flex: 1;
+      }
+      .inner-right {
+        flex: 1;
+        padding: 2rem;
       }
     }
   }

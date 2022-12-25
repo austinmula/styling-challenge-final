@@ -15,12 +15,22 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
+      h2 {
+        max-width: 100px;
+        margin-bottom: 1em;
+        line-height: 1.5em;
+      }
+      p {
+        color: $text-color-dark;
+        max-width: 250px;
+        line-height: 1.5em;
+      }
     }
     .inner-right {
       background: $primary-color;
-      flex: 1;
+      flex: 2;
       color: $text-color-light;
-      padding: 4rem;
+      padding: 4rem 5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
